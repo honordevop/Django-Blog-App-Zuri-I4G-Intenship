@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --ever--green: rgb(22, 139, 22);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button, header{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Source Sans Pro', san;
+    font-size: 18px;
+
+}
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 1.5em 0 1.5em;
+}
+
+.nav-right button {
+    /* display: flex; */
+    /* padding-top: 2rem; */
+    padding: .5em;
+}
+
+/* .nav-left {
+    margin: auto
+} */
+
+.post-entry h2 {
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post-entry h2 a:hover {
+    color: red;
+}
+
+button a{
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+button, .editbtn, .delbtn{
+    padding: .2em; 
+    color: white;
+    background-color: var(--ever--green);
+    border-radius: .5em;
+}
+
+.nav-right button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left a{
+    color: var(--ever--green);
+    text-decoration: none;
+}
+.welcome{
+    color: var(--ever--green);
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Source Sans Pro', san;
+}
+.alert{
+    font-weight: bolder;
+    color: red;
+}
