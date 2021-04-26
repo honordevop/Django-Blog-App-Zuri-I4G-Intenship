@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <button><h2>Delete Post</h2></button>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are sure you want to delete "{{ post.title }}"</p>
+        <button><input type="submit" value="confirm"></button>
+    </form>
+
+{% endblock %}
+</body>
+</html>

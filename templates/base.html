@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Django Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/base.css' %}">
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="nav-left">
+                <h1><a href="{% url 'home' %}">Django Blog</a> </h1>
+            </div>
+            <div class="nav-right">
+                <button><a href="{% url 'login' %}">Log In</a></button> |
+                <button> <a href="{% url 'signup' %}">Create a New Account</a> </button>
+                <button><a href="{% url 'post-new' %}">New Blog Post</a></button>
+            </div>
+        </header>
+        <div style="max-width: 1100px; margin: auto;">
+            <p class="welcome">Welcome to Django Blog</p>
+            {% if user.is_authenticated %}
+            <p>Hi {{ user.username}}! </p>
+            <p> <a href=" {% url 'logout' %} ">Log Out</a> </p>
+            {% else %}
+            <p class="alert">You are not logged in!</p>
+
+            {% endif %}
+
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+</body>
+
+</html>

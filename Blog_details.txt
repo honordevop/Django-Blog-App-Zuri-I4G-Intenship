@@ -1,0 +1,4 @@
+Django Blog Details
+
+username :- admin
+passwrord:- admin101

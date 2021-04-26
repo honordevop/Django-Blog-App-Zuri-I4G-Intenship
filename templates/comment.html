@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Django Blog |</title>
+
+</head>
+
+<body>
+    {% block content %}
+    <div class="post-entry">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+    </div>
+    <br>
+    <button class="editbtn"><a href="{% url 'post-edit' post.pk %}">Edit Blog Post</a></button>
+    <button class="delbtn"><a href="{% url 'post-delete' post.pk %}">+ Delete Blog Post</a></button>
+    
+    <br>
+    <br>
+    <div class="comment-section">
+        {% for comment in post.comments.all %}
+        <p style="font-weight: bolder; text-decoration: underline;">Comments</p>
+        <p>
+            <span class="comment-author" style="font-weight: bolder;">
+                {{ comment.author }}:
+            </span>
+            {{ comment }}
+        </p>
+        {% endfor %}
+    </div>
+    <h1>New Post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button><input type="submit" value="save"></button>
+
+    </form>
+    {% endblock content %}
+</body>
+
+</html>
