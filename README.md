@@ -10,4 +10,4 @@ It hass the following features;
 
 *- User Comment display
 
-The blog App can be checked out at 
+The blog App can be checked out at https://gentle-brushlands-14386.herokuapp.com/
